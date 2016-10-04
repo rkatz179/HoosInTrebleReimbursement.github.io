@@ -1,0 +1,179 @@
+<!-- -->
+<!doctype html>  
+<html>  
+<head> 
+	<meta charset="UTF-8">  
+	<title>Reimbursement Form</title>   
+	<link rel="shortcut icon" type="image/png" href="HIT-logo2.png"/>
+	<style>
+
+		h1 {
+			display: inline-table;
+			font-family: times;
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		textarea {
+			resize: none;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		label {
+
+			display: inline-block;
+			width: 140px;
+			text-align: left;
+		}​
+		.submit{
+			background: #bbaaee;
+			color: white;
+			margin-top: 30px;
+			width: 10%;
+			height: 5%;
+		}
+
+	}
+
+</style>  
+
+<script type="text/javascript">
+     <!--  // Hide script from old browsers 
+     if (top.frames.length !=0)
+     {
+      top.location = document.URL;
+    }
+ /////////////////////////////////////////
+
+ function validateInfo() {
+  var nameField = document.reimbursement.name;
+  var emailField = document.reimbursement.email;
+  var dateField = document.reimbursement.date;
+  var eventField = document.reimbursement.event;
+  var itemField = document.reimbursement.items;
+  var costField = document.reimbursement.costs;
+  var benefitField = document.reimbursement.benefit;
+  var totalField = document.reimbursement.total;
+  if(nameField.value == ""){
+    window.alert("Please enter your name");
+    return (false);
+  }
+  if(emailField.value == ""){
+    window.alert("Please enter your email");
+    return (false);
+  }
+  if (dateField.value == ""){
+    window.alert("Please enter the date of purchase");
+    return (false);
+  }
+  if(eventField.value == ""){
+    window.alert("Please enter the purchase event or purpose");
+    return (false);
+  }
+  if (itemField.value == ""){
+    window.alert("Please enter what was purchased");
+    return (false);
+  }
+  if(costField.value == ""){
+    window.alert("Please enter the costs of each item");
+    return (false);
+  }
+  if (benefitField.value == ""){
+    window.alert("Please enter how the item benefits the group");
+    return (false);
+  }
+  if(totalField.value == ""){
+    window.alert("Please enter the total amount being requested");
+    return (false);
+  }
+  else if (nameField.value != "" && emailField.value != "" && dateField.value != "" && eventField.value != "" && itemField.value != "" && costField.value != "" && benefitField.value != "" && totalField.value != "") {
+  	window.location.href = "confirmation.html";
+  }
+
+  
+}
+
+
+  
+     // end script hiding -->
+   </script>
+
+</head>
+<body style="background-color:pink">
+	<center>
+		<h1>Reimbursement Form</h1>
+		<p> <strong>Directions: </strong> Please fill out each field in the following form in order to qualify for a reimbursement from the Hoos In Treble Fund!
+	</p>
+	</center>
+	<br>
+	<br>
+	<br>
+	<br>
+	<form name="reimbursement" action="mailto:rak5ea@virginia.edu" method="post" enctype="text/plain" >
+		<div class="block">
+			<label>Name:</label>
+			<input style="width:300px" type="text" name="name"/>
+		</div>
+		<br>
+		<div class="block">
+			<label>E-mail:</label>
+			<input style="width:300px" type="text" name="email"/>
+		</div>
+		<br>
+		<div class="block">
+			<label>Date of Purchase:</label>
+			<input style="width:300px" type="text" name="date" />
+		</div>
+		<br>
+		<div class="block">
+			<label>Item Event/Purpose:</label>
+			<input style="width:300px" type="text" name="event"/>
+			<i>e.g. Fall Roll, Concert Video,...</i>
+		</div>
+		<br>
+		<div class="block">
+			<label>Item(s) purchased: </label>
+			<input style="width:300px" type="text" name="items" />
+			<i>e.g. Gas, Sheets of Music,...</i>
+		</div>
+		<br>
+		<div class="block">
+			<label>Item(s) cost: </label>
+			<input style="width:300px" type="text" name="costs" />
+			<i>e.g. $20, $30, ...</i>
+		</div>
+		<br>
+		<div class="block">
+			<label>How did this benefit HIT: </label>
+			<input style="width:300px" type="text" name="benefit" />
+		</div>
+		<br>
+		<div class="block">
+			<label>Total amount being requested: </label>
+			<input style="width:50px" type="text" name="total" />
+		</div>
+		</form>
+		<br>
+		<br>
+		<br>
+		<center>
+		<br>
+		<br>
+		When you click submit, you are agreeing to present your receipts to the business manager in person. 
+		<br>
+		You will be notified if your request is approved!
+		<br>
+		<br>
+		Thanks!
+		<br>
+		<br>
+		<button class="submit" onclick="validateInfo()" >Submit</button>
+		</center>
+
+
+
+
+</body> 
+</html>  
